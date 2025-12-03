@@ -7,12 +7,12 @@ import { Button } from '@/components/ui/button';
 const Workshops = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('All');
 
-  const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+  const Catergories = ['All', 'Decor', 'Lamps', 'Accesories'];
 
   const filteredWorkshops =
     selectedDifficulty === 'All'
       ? workshops
-      : workshops.filter((w) => w.difficulty === selectedDifficulty);
+      : workshops.filter((w) => w.Category === selectedDifficulty);
 
   return (
     <div>
@@ -25,7 +25,7 @@ const Workshops = () => {
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-6xl font-serif font-bold mb-4"
           >
-            Workshops
+            Collections
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ const Workshops = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Hands-on classes for all skill levels. Learn, create, and connect with fellow makers.
+            Elevate your space with pieces crafted to bring warmth, character, and artistry into every corner of your home
           </motion.p>
         </div>
       </section>
@@ -47,8 +47,8 @@ const Workshops = () => {
             transition={{ duration: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-3 mb-12"
           >
-            <span className="text-lg font-medium mr-2">Filter by level:</span>
-            {difficulties.map((difficulty) => (
+            <span className="text-lg font-medium mr-2">Filter by type:</span>
+            {Catergories.map((difficulty) => (
               <Button
                 key={difficulty}
                 variant={selectedDifficulty === difficulty ? 'default' : 'outline'}

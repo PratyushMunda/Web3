@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Heart, Users, Sparkles, ArrowRight } from 'lucide-react';
+import { Heart, Leaf, Sparkles, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import WorkshopCard from '@/components/WorkshopCard';
 import BlogCard from '@/components/BlogCard';
 import { workshops } from '@/data/workshops';
 import { blogPosts } from '@/data/blogPosts';
-import heroImage from '@/assets/hero-macrame.jpg';
+import heroImage from '@/assets/Pasted image.png';
 
 const Home = () => {
   const featuredWorkshops = workshops.slice(0, 3);
@@ -16,22 +16,24 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-end justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black" />
         </div>
 
-        <div className="relative z-10 container-custom text-center">
+        <div className="relative z-10 container-custom text-center pb-24">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-serif font-bold text-white mb-6"
+            className="text-6xl md:text-8xl font-serif font-light text-corn-silk mb-6 mt-16"
           >
-            Knots & Loom Studio
+            FEEL THE MAGIC OF HAND WOVEN CREATIVITY
+
+
           </motion.h1>
 
           <motion.p
@@ -40,7 +42,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
           >
-            Discover the art of macramé through hands-on workshops and creative community
+            
           </motion.p>
 
           <motion.div
@@ -49,16 +51,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link to="/workshops">
-              <Button size="lg" className="btn-primary text-lg px-8 py-6">
-                Explore Workshops
-              </Button>
-            </Link>
-            <Link to="/about">
-              <Button size="lg" variant="outline" className="btn-outline text-lg px-8 py-6 bg-white/10 backdrop-blur-sm text-white border-white hover:bg-white hover:text-foreground">
-                Our Story
-              </Button>
-            </Link>
+
           </motion.div>
         </div>
       </section>
@@ -73,9 +66,9 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">Our Workshops</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">Our Collection</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join our creative sessions and learn the timeless art of macramé in a welcoming environment
+              Elevate your space with pieces crafted to bring warmth, character, and artistry into every corner of your home
             </p>
           </motion.div>
 
@@ -88,7 +81,7 @@ const Home = () => {
           <div className="text-center">
             <Link to="/workshops">
               <Button size="lg" variant="outline" className="btn-outline group">
-                View All Workshops
+                View All Collections
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -107,25 +100,25 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">Our Values</h2>
-            <p className="text-xl text-muted-foreground">What makes our studio special</p>
+            <p className="text-xl text-muted-foreground">What makes our pieces special</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: Heart,
-                title: 'Craftsmanship',
-                description: 'We honor traditional techniques while embracing modern creativity, ensuring every piece tells a story.',
+                title: 'Handwoven with love',
+                description: 'Each lamp is crafted using traditional weaving techniques, ensuring durability and beauty',
               },
               {
                 icon: Sparkles,
-                title: 'Creativity',
-                description: 'Express yourself through fiber art. We believe everyone has a unique creative voice waiting to be discovered.',
+                title: 'Custom Creations',
+                description: 'Tailor your lamp to match your vision, down to the finest details.',
               },
               {
-                icon: Users,
-                title: 'Community',
-                description: 'Building connections through craft. Our studio is a welcoming space for makers of all levels.',
+                icon: Leaf,
+                title: 'Sustainable',
+                description: 'We use eco-friendly materials to promote sustainable living',
               },
             ].map((value, index) => (
               <motion.div
@@ -158,9 +151,9 @@ const Home = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <blockquote className="text-3xl md:text-4xl font-serif font-medium text-foreground mb-6 leading-relaxed">
-              "In every knot, there is intention. In every piece, there is soul. Macramé is not just about creating beauty—it's about weaving moments of mindfulness into our busy lives."
+              In every knot, there is intention. In every piece, there is soul. Macramé is not just about creating beauty its about weaving moments of mindfulness into our busy lives.
             </blockquote>
-            <p className="text-lg text-muted-foreground">— Emma Craft, Founder</p>
+            <p className="text-lg text-muted-foreground">— Diksha Chandrakar, Founder</p>
           </motion.div>
         </div>
       </section>
@@ -210,7 +203,7 @@ const Home = () => {
           >
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">Stay Connected</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join our newsletter for workshop updates, creative tips, and exclusive offers
+              Join our newsletter for store updates, creative tips, and exclusive offers
             </p>
 
             <form

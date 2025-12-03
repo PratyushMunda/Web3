@@ -1,23 +1,23 @@
 import { motion } from 'framer-motion';
 import { Heart, Leaf, Users as UsersIcon } from 'lucide-react';
-import workshopHandsImage from '@/assets/workshop-hands.jpg';
+import workshopHandsImage from '@/assets/img/aboutUsIMG1.png';
 import workshopGroupImage from '@/assets/workshop-group.jpg';
 
 const About = () => {
   const team = [
     {
-      name: 'Emma Craft',
+      name: 'Diksha Chandrakar',
       role: 'Founder & Lead Instructor',
-      bio: 'Discovered macramé in Morocco and turned passion into purpose. Emma believes in the meditative power of knotwork.',
+      bio: 'Discovered macramé in Morocco and turned passion into purpose. Diksha believes in the meditative power of knotwork.',
     },
     {
-      name: 'Sophia Green',
-      role: 'Sustainability Coordinator',
+      name: 'Diksha Chandrakar',
+      role: 'Founder & Lead Instructor',
       bio: 'Ensures all our materials are ethically sourced and eco-friendly. Sophia champions natural fibers and sustainable practices.',
     },
     {
-      name: 'Jake Rivers',
-      role: 'Workshop Coordinator',
+      name: 'Diksha Chandrakar',
+      role: 'Founder & Lead Instructor',
       bio: 'Handles scheduling and welcomes newcomers with patience and enthusiasm. Jake has taught over 500 students.',
     },
   ];
@@ -59,21 +59,25 @@ const About = () => {
               <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Knots & Loom Studio was born from a simple love of fiber art and a desire to create
-                  community around the craft. Founded in 2021 by Emma Craft, our studio has grown from
-                  a small workshop space into a thriving creative hub.
+                  Doodle with Threads brings you an exclusive range of handcrafted home décor items, 
+                  proudly created by skilled women artisans.
                 </p>
                 <p>
-                  We believe that macramé is more than just a craft—it's a meditative practice, a form
-                  of self-expression, and a way to connect with others who share a passion for
-                  handmade beauty.
+                  Through our work, we empower women by providing them with opportunities to showcase 
+                  their craftsmanship, preservetraditional weaving techniques, and achieve financial
+                  independence.
                 </p>
                 <p>
-                  Every day, we welcome beginners taking their first steps into fiber art and
-                  experienced makers pushing the boundaries of what's possible with knots and cord.
-                  Our mission is to keep this ancient art form alive while making it accessible and
-                  relevant for modern creators.
+                  Your space is unique, and your décor should reflect that. Our bespoke designs allow 
+                  you to personalize every detail, from colors and patterns to sizes, ensuring that each
+                  piece aligns perfectly withyour aesthetic vision.
                 </p>
+                <p>
+
+                  Our bespoke creations allow you to personalize colors, patterns, and sizes, ensuring that 
+                  each piece seamlessly integrates into your aesthetic vision.
+                </p>
+
               </div>
             </motion.div>
 
@@ -94,61 +98,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="section-padding bg-accent/20">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">Our Philosophy</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The values that guide everything we do
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Heart,
-                title: 'Quality Over Quantity',
-                description:
-                  'We focus on teaching proper techniques and using premium natural materials. Every piece should be made with care and intention.',
-              },
-              {
-                icon: Leaf,
-                title: 'Sustainable Practice',
-                description:
-                  'We exclusively use natural, biodegradable fibers and encourage mindful consumption. Our craft honors both tradition and the environment.',
-              },
-              {
-                icon: UsersIcon,
-                title: 'Inclusive Community',
-                description:
-                  'Everyone is welcome here, regardless of skill level or background. We foster a supportive environment where creativity thrives.',
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-card p-8 rounded-2xl shadow-lg text-center"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-                  <item.icon size={32} />
-                </div>
-                <h3 className="text-2xl font-serif font-semibold mb-4">{item.title}</h3>
-                <p className="text-muted-foreground">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team Section */}
       <section className="section-padding bg-background">

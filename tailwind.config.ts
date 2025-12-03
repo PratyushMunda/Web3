@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      letterSpacing: {
+        custom: '3px',
+      },
       fontFamily: {
         serif: ['var(--font-serif)'],
         sans: ['var(--font-sans)'],
@@ -55,6 +58,20 @@ export default {
         "warm-cream": "hsl(var(--warm-cream))",
         "deep-brown": "hsl(var(--deep-brown))",
         "soft-sage": "hsl(var(--soft-sage))",
+        nugget: {
+          '50': '#fbf9eb',
+          '100': '#f5f2cc',
+          '200': '#ede29b',
+          '300': '#e2cc62',
+          '400': '#d8b637',
+          '500': '#c49d29',
+          '600': '#ac7f22',
+          '700': '#8a5d1e',
+          '800': '#734b20',
+          '900': '#633f20',
+          '950': '#39210f',
+        },
+        'corn-silk': '#FFF8DC',
       },
       borderRadius: {
         lg: "var(--radius)",

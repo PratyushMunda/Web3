@@ -1,73 +1,20 @@
-# Welcome to your Lovable project
+The issue you're encountering with the font weight is because the font file you're using (`Fontspring-DEMO-theseasons-bd.otf`) is a **bold** version, as indicated by the "bd" in its name.
 
-## Project info
+In `src/index.css`, the `@font-face` rule was set to `font-weight: 100` (a thin weight), but since the font file only contains a bold weight, the browser defaults to what's available. I've corrected this in your CSS to `font-weight: bold` to accurately reflect the file being used.
 
-**URL**: https://lovable.dev/projects/b28b72bc-7d23-4b14-8449-eb3f8d7c56bb
+To use a thin version of 'TheSeasons' font, you'll need to:
 
-## How can I edit this code?
+1.  **Obtain the font file for the thin weight** (e.g., `TheSeasons-Thin.otf`).
+2.  **Add this file** to the `src/assets/fonts` directory.
+3.  **Add a new `@font-face` rule** to `src/index.css` for the thin font. For example:
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b28b72bc-7d23-4b14-8449-eb3f8d7c56bb) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```css
+@font-face {
+  font-family: 'TheSeasons';
+  src: url('./assets/fonts/TheSeasons-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b28b72bc-7d23-4b14-8449-eb3f8d7c56bb) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+After you've done this, you'll be able to apply the thin font weight correctly in your project. If you can provide the thin font file, I can assist you further.

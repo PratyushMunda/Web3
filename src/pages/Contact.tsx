@@ -81,8 +81,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:hello@knotsloom.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      hello@knotsloom.com
+                    <a href="mailto:doodlewiththreads@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      doodlewiththreads@gmail.com
                     </a>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <a href="tel:+15551234567" className="text-muted-foreground hover:text-primary transition-colors">
-                      (555) 123-4567
+                      (+91) 8871295227
                     </a>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       123 Craft Lane<br />
                       Downtown Arts District<br />
-                      Portland, OR 97209
+                      India
                     </p>
                   </div>
                 </div>

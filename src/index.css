@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Italiana';
+  src: url('./assets/fonts/italiana.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('./assets/fonts/josefin-sans.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
@@ -19,8 +33,7 @@
     --popover: 30 20% 98%;
     --popover-foreground: 25 20% 20%;
 
-    /* Terracotta accent */
-    --primary: 15 65% 55%;
+    --primary: 29 31% 45%;
     --primary-foreground: 30 20% 98%;
 
     /* Sage secondary */
@@ -51,8 +64,8 @@
     --soft-sage: 140 20% 70%;
     
     /* Typography */
-    --font-serif: 'Playfair Display', serif;
-    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Italiana', 'Playfair Display', serif;
+    --font-sans: 'Josefin Sans', 'Inter', sans-serif;
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -117,7 +130,8 @@
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    @apply font-medium;
+    letter-spacing: 3px;
+    @apply font-normal;
   }
 }
 
